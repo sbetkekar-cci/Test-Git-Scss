@@ -1,0 +1,30 @@
+/* BUTTONS */
+@mixin btn($bg-color:red) {
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    padding: 20px 10px;
+}
+
+.btn {
+    @include btn;
+}
+
+
+@each $key,
+$val in $colors {
+    .btn-#{$key} {
+        background-color: $val;
+        @include btn();
+
+        &:hover {
+            background-color: lighten($val, 8)
+        }
+    }
+
+    .btn-outlined-#{$key} {
+        background-color: transparent;
+        @include btn();
+
+    }
+}

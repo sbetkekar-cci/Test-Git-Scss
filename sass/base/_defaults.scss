@@ -1,0 +1,35 @@
+/* Base Stylings like ul, p, body, etc */
+
+/* Body & Html */
+body, html{
+	height:100%;
+	@include font-size($font-size-base);
+	color: $text-primary;
+	font-family: $font-primary;
+	-webkit-overflow-scrolling: touch;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+}
+
+a{
+	color: $text-primary;
+}
+
+/* Paragraphs */
+p{
+	@include font-size($font-size-para); 
+}
+
+/* Strong */
+strong, b{
+	font-weight:$font-weight-bold;
+}
+
+
+section{
+    button{
+        width: 155px;
+        height: 38px;
+        padding: 0 10px;
+    }
+}
